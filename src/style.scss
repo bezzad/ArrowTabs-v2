@@ -35,23 +35,29 @@ $darkbackground: #352624;
             transition: 0.3s ease;
         }
 
-        &.ui-tabs-active a {
+        &.ui-tabs-active {
+            &:before,
+            &:after{
+               opacity: 1;  
+            }
+            
+            a {
             color: $green;
+            }
         }
         
-        &.ui-tabs-active:before,
-        &.ui-tabs-active:after,
-        &.ui-state-hover:before,
-        &.ui-state-hover:after,
-        &.ui-state-focus:before,
-        &.ui-state-focus:after {
-            opacity: 1;            
+        &:hover,        
+        &:focus{
+            &:before,
+            &:after{
+                opacity: 1;            
+            }
         }
 
         // this is the shadow under the text/mask
         &:before,
-        &.ui-state-active.ui-state-hover:before,
-        &.ui-state-active.ui-state-focus:before {
+        &.ui-state-active:hover:before,
+        &.ui-state-active:focus:before {
             content: "";
             position: absolute;
             z-index: -1;
@@ -66,8 +72,8 @@ $darkbackground: #352624;
         // this is the "diamond" mask that creates the
         // nice indent effect.
         &:after,
-        &.ui-state-active.ui-state-hover:after,
-        &.ui-state-active.ui-state-focus:after {
+        &.ui-state-active:hover:after,
+        &.ui-state-active:focus:after {
             content: "";
             background: $background;
             position: absolute;
@@ -80,12 +86,12 @@ $darkbackground: #352624;
             box-shadow: 3px 3px 3px $color,
                 1px 1px 1px opacify($border, 0.1);
         }
-        &.ui-state-hover:before,
-        &.ui-state-focus:before {
+        &:hover:before,
+        &:focus:before {
             box-shadow: 0 2px 3px $border;
         }
-        &.ui-state-hover:after,
-        &.ui-state-focus:after {
+        &:hover:after,
+        &:focus:after {
             box-shadow: 3px 3px 3px $border,
                 1px 1px 1px opacify($border, 0.1);
         }
@@ -118,26 +124,26 @@ $darkbackground: #352624;
 
         // this is the shadow under the text/mask
         &:before,
-        &.ui-state-active.ui-state-hover:before,
-        &.ui-state-active.ui-state-focus:before {
+        &.ui-state-active:hover:before,
+        &.ui-state-active:focus:before {
             box-shadow: 0 2px 3px $darkborder;
         }
 
         // this is the "diamond" mask that creates the
         // nice indent effect.
         &:after,
-        &.ui-state-active.ui-state-hover:after,
-        &.ui-state-active.ui-state-focus:after {
+        &.ui-state-active:hover:after,
+        &.ui-state-active:focus:after {
             background: $darkbackground;
             box-shadow: 3px 3px 3px $darkborder,
                 1px 1px 1px opacify($darkborder, 0.2);
         }
-        &.ui-state-hover:before,
-        &.ui-state-focus:before {
+        &:hover:before,
+        &:focus:before {
             box-shadow: none;
         }
-        &.ui-state-hover:after,
-        &.ui-state-focus:after {
+        &:hover:after,
+        &:focus:after {
             box-shadow: 1px 1px 0px opacify($darkborder, 0.1);
         }
 
