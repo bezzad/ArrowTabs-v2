@@ -1,11 +1,3 @@
-$(".arrow-tabs li").hover(
-  function() {
-    $(this).addClass("ui-state-hover");
-  }, function() {
-    $(this).removeClass("ui-state-hover");
-  }
-);
-
 $('.arrow-tabs a').click(function (e) {
   e.preventDefault()
   var selectedTab = $(this).parent();
