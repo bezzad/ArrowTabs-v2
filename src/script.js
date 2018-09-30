@@ -15,6 +15,6 @@ $('.arrow-tabs a').click(function (e) {
   
   // show/hide content
     var content = ul.parent().find(".contents .ui-tabs-panel");
-    content.fadeOut(200);  
+    content.hide();  
     ul.parent().find($(this).attr("href")).fadeIn(200);   
 })
