@@ -2,15 +2,15 @@
 
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
-$color: rgba(0,153,148, 0.5);
-$border: rgba(0, 0, 0, 0.2);
-$background: #fafafa;
+$light-color: rgba(0,153,148, 0.5);
+$light-border: rgba(0, 0, 0, 0.2);
+$white: #fafafa;
 
 $green: #009994;
 
-$darkcolor: rgba(0,153,148, 0.6);
-$darkborder: rgba(255, 255, 255, 0.3);
-$darkbackground: #352624;
+$dark-color: rgba(0,153,148, 0.6);
+$dark-border: rgba(255, 255, 255, 0.3);
+$brown: #352624;
 
 .arrow-tabs > ul {
     text-align: center;
@@ -18,12 +18,12 @@ $darkbackground: #352624;
     margin: 50px 0 0;
     padding: 0;
     position: relative;
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid $light-border;
     z-index: 1;
 
     > li {
         display: inline-block;
-        background: $background;
+        background: $white;
         padding: 0.6em 0;
         position: relative;
         width: 33%;
@@ -61,7 +61,7 @@ $darkbackground: #352624;
             content: "";
             position: absolute;
             z-index: -1;
-            box-shadow: 0 2px 3px $color;
+            box-shadow: 0 2px 3px $light-color;
             top: 50%;
             bottom: 0px;
             left: 5px;
@@ -75,7 +75,7 @@ $darkbackground: #352624;
         &.ui-state-active:hover:after,
         &.ui-state-active:focus:after {
             content: "";
-            background: $background;
+            background: $white;
             position: absolute;
             width: 12px;
             height: 12px;
@@ -83,17 +83,17 @@ $darkbackground: #352624;
             bottom: -6px;
             margin-left: -6px;
             transform: rotate(45deg);
-            box-shadow: 3px 3px 3px $color,
-                1px 1px 1px opacify($border, 0.1);
+            box-shadow: 3px 3px 3px $light-color,
+                1px 1px 1px opacify($light-border, 0.1);
         }
         &:hover:before,
         &:focus:before {
-            box-shadow: 0 2px 3px $border;
+            box-shadow: 0 2px 3px $light-border;
         }
         &:hover:after,
         &:focus:after {
-            box-shadow: 3px 3px 3px $border,
-                1px 1px 1px opacify($border, 0.1);
+            box-shadow: 3px 3px 3px $light-border,
+                1px 1px 1px opacify($light-border, 0.1);
         }
        
         &:focus {
@@ -117,16 +117,16 @@ $darkbackground: #352624;
 }
 
 .arrow-tabs.dark > ul {
-    border-bottom-color: $darkborder;
+    border-bottom-color: $dark-border;
 
     > li {
-        background: $darkbackground;
+        background: $brown;
 
         // this is the shadow under the text/mask
         &:before,
         &.ui-state-active:hover:before,
         &.ui-state-active:focus:before {
-            box-shadow: 0 2px 3px $darkborder;
+            box-shadow: 0 2px 3px $dark-border;
         }
 
         // this is the "diamond" mask that creates the
@@ -134,9 +134,9 @@ $darkbackground: #352624;
         &:after,
         &.ui-state-active:hover:after,
         &.ui-state-active:focus:after {
-            background: $darkbackground;
-            box-shadow: 3px 3px 3px $darkborder,
-                1px 1px 1px opacify($darkborder, 0.2);
+            background: $brown;
+            box-shadow: 3px 3px 3px $dark-border,
+                1px 1px 1px opacify($dark-border, 0.2);
         }
         &:hover:before,
         &:focus:before {
@@ -144,7 +144,7 @@ $darkbackground: #352624;
         }
         &:hover:after,
         &:focus:after {
-            box-shadow: 1px 1px 0px opacify($darkborder, 0.1);
+            box-shadow: 1px 1px 0px opacify($dark-border, 0.1);
         }
 
         a {
@@ -162,7 +162,7 @@ $darkbackground: #352624;
 
 body {
     font-size: 1em;
-    background: $background;
+    background: $white;
     font-family: Lato;
     font-weight: 300;
     padding: 50px 0;   
@@ -185,7 +185,7 @@ h1 {
 
 .darkpage { 
   
-  background: $darkbackground; 
+  background: $brown; 
   color: white;
   
 }
